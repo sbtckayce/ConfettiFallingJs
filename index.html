@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Confetti Falling</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Confetti Falling Js</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam illum quibusdam enim modi, dolor, molestias ab eum alias dolorum vitae explicabo veritatis quisquam doloremque dignissimos, quod recusandae possimus voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim cum hic qui numquam quae et explicabo culpa, ipsa, vel laudantium? Odio perspiciatis iste qui corporis omnis reprehenderit doloremque blanditiis.
+            
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam illum quibusdam enim modi, dolor, molestias ab eum alias dolorum vitae explicabo veritatis quisquam doloremque dignissimos, quod recusandae possimus voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim cum hic qui numquam quae et explicabo culpa, ipsa, vel laudantium? Odio perspiciatis iste qui corporis omnis reprehenderit doloremque blanditiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima recusandae praesentium aperiam veritatis odit? Deleniti dignissimos perspiciatis, distinctio pariatur illum excepturi amet ducimus vero culpa, laboriosam incidunt aliquid minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam illum quibusdam enim modi, dolor, molestias ab eum alias dolorum vitae explicabo veritatis quisquam doloremque dignissimos, quod recusandae possimus voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim cum hic qui numquam quae et explicabo culpa, ipsa, vel laudantium? Odio perspiciatis iste qui corporis omnis reprehenderit doloremque blanditiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima recusandae praesentium aperiam veritatis odit? Deleniti dignissimos perspiciatis, distinctio pariatur illum excepturi amet ducimus vero culpa, laboriosam incidunt aliquid minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam illum quibusdam enim modi, dolor, molestias ab eum alias dolorum vitae explicabo veritatis quisquam doloremque dignissimos, quod recusandae possimus voluptas.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim cum hic qui numquam quae et explicabo culpa, ipsa, vel laudantium? Odio perspiciatis iste qui corporis omnis reprehenderit doloremque blanditiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima recusandae praesentium aperiam veritatis odit? Deleniti dignissimos perspiciatis, distinctio pariatur illum excepturi amet ducimus vero culpa, laboriosam incidunt aliquid minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima recusandae praesentium aperiam veritatis odit? Deleniti dignissimos perspiciatis, distinctio pariatur illum excepturi amet ducimus vero culpa, laboriosam incidunt aliquid minima.
+        </p>
+       <a href="#" class="btn">Click Here</a>
+       <div class="popup">
+           <h2>Your content goes hear</h2>
+           <b class="close">X</b>
+       </div>
+
+
+
+
+    </div>
+    
+    <canvas id="my-canvas"></canvas>
+    <script src="./assets/js/index.min.js"></script>
+    <script>
+        let btn =document.querySelector('.btn');
+        let popup =document.querySelector('.popup')
+        let close =document.querySelector('.close');
+        let canvas =document.querySelector('#my-canvas');
+        btn.addEventListener('click',function(){
+            popup.classList.add('active')
+            canvas.classList.add('active')
+            setTimeout(()=>{
+                canvas.classList.remove('active')
+            },3000
+            )
+        })
+        close.addEventListener('click',function(){
+            popup.classList.remove('active')
+            canvas.classList.remove('active')
+        })
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render()
+    </script>
+   
+</body>
+</html>
